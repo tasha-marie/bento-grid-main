@@ -20,7 +20,7 @@
   --off-white: hsl(0, 0%, 96%);
   --black: hsl(0, 0%, 7%);
 
-  --fs-reg: 1.125rem;
+  --fs-reg: 1.75rem;
   --fs-med: 2rem;
   --fs-lg: 3rem;
   --fs-xl: 4rem;
@@ -122,7 +122,10 @@
     font-weight: 500;
 
     span {
+      display: var(--heading-span-display, inline);
       color: var(--heading-span-color, var(--black));
+      font-size: var(--heading-span-font-size, inherit);
+      font-style: var(--heading-span-style);
     }
   }
 }
@@ -184,8 +187,36 @@
   }
 
    .bento-grid > :nth-child(4) {
+    --bento-card-horizontal-align: center;
     --bento-card-bg: var(--purple-100);
    }
+
+   .bento-grid > :nth-child(5) {
+    --bento-card-bg: var(--purple-500);
+    --bento-card-color: var(--white);
+    --bento-card-horizontal-align: center;
+    --bento-card-img-width: 60%;
+    --bento-card-img-order: -1;
+  }
+
+  .bento-grid > :nth-child(6) {
+    --heading-span-display: block;
+    --heading-span-font-size: var(--fs-reg);
+    --heading-font-size: var(--fs-xl);
+    --bento-card-img-width: 60%;
+  }
+
+  .bento-grid > :nth-child(7) {
+    --bento-card-bg: var(--yellow-100);
+    --bento-card-img-width: 60%;
+    --heading-span-color: var(--purple-500);
+    --heading-span-style: italic;
+  }
+
+  .bento-grid > :nth-child(8) {
+    --bento-card-bg: var(--yellow-500);
+    --bento-card-img-width: 60%;
+  }
 }
 
 @layer utilities {
