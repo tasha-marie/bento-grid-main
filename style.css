@@ -221,6 +221,13 @@
     --bento-card-horizontal-align: center;
     --bento-card-img-width: 60%;
     --bento-card-img-order: -1;
+
+    @media (width > 960px) {
+      grid-template-columns: 1fr 1fr;
+      --bento-card-horizontal-align: start;
+      --bento-card-gap: 1rem;
+      --bento-card-img-width: 110%;
+    }
   }
 
   .bento-grid > :nth-child(6) {
